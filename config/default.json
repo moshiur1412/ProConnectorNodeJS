@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://root:root123@proconnector-xdaxa.mongodb.net/test?retryWrites=true&w=majority"
+}
