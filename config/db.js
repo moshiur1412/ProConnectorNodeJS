@@ -2,15 +2,14 @@ const mongoose = require('mongoose');
 const config = require('config');
 const db = config.get('mongoURI');
 
-console.log('Config/DB Worked....');
-
-// mongoose.connect(db);
-
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false
     });
+
     console.log('MongoDB Connected...');
   } catch (err) {
     console.error(err.message);
