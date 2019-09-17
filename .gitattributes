@@ -1,1 +1,4 @@
-*.* linguist-language= NodeJS
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.* linguist-language=NodeJS
