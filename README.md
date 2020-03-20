@@ -140,49 +140,6 @@ Copy -> Connection String Only
 
 ---
 
-## Questions and Answers
-
-### How would you deploy the above on AWS? (ideally, a rough architecture diagram will help)
-
-![arc](aws_deploy_diagram.jpg?raw=true 'Architecture')
-
-### Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/day to 900MM reqs/day over 6 months?
-
-In this section, I am just trying to figure out from the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. Therefore, here is the suitable answers are following below.
-
-**_AWS Service Purpose_**
-
--   Used auto-scaling tools(configure: group name, min & max size, and availability zones)
--   Around 19 Regions (Availability Zones, used advantage from AWS global infrastructure)
--   Robust, used for fully featured technology infrastructure.
--   Used AWS building blocks (lambda, CloudFront, Elastic etc.)
-
-**_For Application Purpose_**
-
--   Application load balancer(session, logging, routing, and health check)
--   shift some load around (Used cache content)
--   Managed NoSQL database for lace schema
--   Service Oriented Architecture
-
-**_Users >1 Millions_**
-
--   Used Multi-AZ deployment
--   Elastic Load Balancing between tires
--   Used Auto Scaling tools
--   Service Oriented Architecture (SOA)
--   Serving Content Smartly(S3/ColudFront)
--   Caching off DB (configurations)
--   Moving state off tiers that auto scale
-
-**_Users >10 Millions_**
-
--   More fine-tuning of the full application
--   More SOA of features/functionality
--   Going from multi-Az to multi-region
--   Possibly start to build custom solutions
--   Deep analysis of the entire stack
--   Build serverless whenever possible
-
 ## Summary
 
 ProConnector is successfully developed and implemented also it's live now as a first version 1.0. After the hardworking and self-studying period, I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
